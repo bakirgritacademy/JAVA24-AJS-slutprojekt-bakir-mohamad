@@ -1,0 +1,196 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+aside {
+  width: 20%;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+section {
+  width: 80%;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+form {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+input, select {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+/* Utility-färger */
+.bg-blue-500 { background-color: #3b82f6; color: white; }
+.bg-green-600 { background-color: #16a34a; color: white; }
+.bg-red-600 { background-color: #dc2626; color: white; }
+
+.text-sm { font-size: 0.85rem; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-500 { color: #6b7280; }
+.text-red-600 { color: #dc2626; }
+
+/* Grid-layout */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-cols-1 { grid-template-columns: 1fr; }
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Kolumnboxar */
+.task-column {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.task-card {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+/* För separata task-kort */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Formulär längst ner i kolumn */
+.task-form-wrapper {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Inlineform i botten */
+.inline-form {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.5rem;
+  margin-top: auto;
+}
+
+/* Filterpanelen */
+.filter-panel {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.filter-panel select,
+.filter-panel input {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  min-width: 180px;
+}
+
+/* Ikonknappar */
+.icon-button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.icon-button:hover {
+  opacity: 0.9;
+}
+
+.icon-button i {
+  font-size: 1.2rem;
+}
+
+.task-card .icon-button {
+  margin-right: 0.4rem;
+}
+
+.task-card .icon-button:last-child {
+  margin-right: 0;
+}
+
+.category-box {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+  margin-top: 1.5rem;
+}
+
